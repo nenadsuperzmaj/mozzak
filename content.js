@@ -37,7 +37,12 @@ document.onreadystatechange = () => {
 			iscepkaniTekst = tekst.split(/\r?\n/);
 
 			if (!(iscepkaniTekst[4].includes("+"))) {
-				// obradjeniTekst+=iscepkaniTekst[0]+": ("+iscepkaniTekst[4]+") "+iscepkaniTekst[2]+" ("+iscepkaniTekst[5]+") "+iscepkaniTekst[3]+" ("+iscepkaniTekst[6]+")\n";
+				
+				if (iscepkaniTekst[0].includes("pon.") || iscepkaniTekst[0].includes("uto.") || iscepkaniTekst[0].includes("sre.") || iscepkaniTekst[0].includes("čet.") || iscepkaniTekst[0].includes("pet.") || iscepkaniTekst[0].includes("sub.") || iscepkaniTekst[0].includes("ned."))
+				{
+				obradjeniTekst+=iscepkaniTekst[0]+": ("+iscepkaniTekst[4]+") "+iscepkaniTekst[2]+" ("+iscepkaniTekst[5]+") "+iscepkaniTekst[3]+" ("+iscepkaniTekst[6]+")\n";
+				}
+				else
 				obradjeniTekst+=iscepkaniTekst[0]+": ("+iscepkaniTekst[7]+") "+iscepkaniTekst[5]+" ("+iscepkaniTekst[8]+") "+iscepkaniTekst[6]+" ("+iscepkaniTekst[9]+")\n";
 			}
 
